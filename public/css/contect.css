@@ -1,0 +1,120 @@
+.form {
+    position: relative;
+    top: -5%;
+    left: 0%;
+    width: 400px;
+}
+
+form {
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+form .text_feild {
+    position: relative;
+    border-bottom: 1px solid #adadad;
+    margin: 30px 0;
+}
+
+.text_feild input {
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.text_feild label {
+    position: absolute;
+    top: 0;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.text_feild span:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #26919d;
+    transition: 0.5s;
+}
+
+.text_feild input:focus~label,
+.text_feild input:valid~label {
+    top: -20px;
+    color: #26919d;
+}
+
+.text_feild input:focus~span::before,
+.text_feild input:focus~span::before {
+    width: 100%;
+}
+
+
+
+
+/* popup style  */
+.popup {
+    width: 400px;
+    background-color: #fff;
+    border-radius: 6px;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    box-shadow: 5px 5px 21px #a6a6a6,
+        -5px -5px 2px #ffffff;
+
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s
+}
+
+.open-popup {
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.popup img {
+    width: 100px;
+    margin-top: -50px;
+    border-radius: 50%;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    background: #6fd649;
+    color: #fff;
+    font-size: 64px;
+
+}
+
+.popup h2 {
+    font-size: 38px;
+    font-weight: 500;
+    margin: 30px 0px 10px;
+}
+
+.popup button {
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0px;
+    background: #6fd649;
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+
+}

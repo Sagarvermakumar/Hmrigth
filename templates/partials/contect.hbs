@@ -1,0 +1,71 @@
+
+
+
+<div class="container-fluid mt-5 contact-style" id="contectid">
+    <div class="row">
+        <div class="col-md-10 col-12 mx-auto">
+            <h1 class="text-center main-heading">contect Us</h1>
+            <p class="text-center sub-heading">We are happy to help you</p>
+            <div class="row">
+
+                <div
+                    class="col-md-6 col-12 hero-text order-md-0 order-1 d-flex justify-content-center align-items-start flex-column">
+                    <div class="form">
+                        <form action="/contect" method="post">
+                            <div class="text_feild">
+                                <input type="text" name="name" required>
+                                <span></span>
+                                <label for="name">Name</label>
+                            </div>
+                            <div class="text_feild">
+                                <input type="text" name="email" required>
+                                <span></span>
+                                <label for="email">Email Address</label>
+                            </div>
+                            <div class="text_feild">
+                                <input type="number" name="number" required>
+                                <span></span>
+                                <label for="number">Number</label>
+                            </div>
+                            <div class="text_feild">
+                                <input type="text" name="message" required>
+                                <span></span>
+                                <label for="message">Your message</label>
+                            </div>
+                            <button type="submit" class="btn-style" onclick="openPopup()" id="closeBtn" >
+                                submit
+                            </button>
+                            <div class="popup" id="popup">
+                                <img src="image/checkmark-outline.svg" alt="">
+                                <h2>Thank You</h2>
+                                <p>Your Details has been Successfully submitted. Thanks!</p>
+                                <button  type="button" onclick="closePopup()">Close</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+                <div class="col-md-6 col-12 hero-text">
+                    <figure class="block-540">
+                        <img src="image/contect.png" width="400px">
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    let popup = document.getElementById('popup');
+    let closeBtn = document.getElementById('closeBtn');
+
+    function openPopup(params) {
+        popup.classList.add('open-popup');
+         setTimeout(()=>{
+            closeBtn.style.display="none";
+         },350)
+    }
+    function closePopup(params) {
+        popup.classList.remove('open-popup');
+        closeBtn.style.display="block";
+    }
+</script>
